@@ -25,10 +25,23 @@ class APIHelper {
                 }
                 if data != nil {
                     // convertir en JSON
+                    do {
+                        let reponseJSON = try JSONDecoder().decode(APIResult.self, from: data!)
+                        for perso in reponseJSON.results {
+                            print(perso.name)
+                            print(perso.gender)
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                } else {
+                    print("Aucune data dispo")
                 }
+                /*
                 print(data)
                 print(response)
                 print(error)
+ */
             }.resume()
         } else {
             // on arrete
