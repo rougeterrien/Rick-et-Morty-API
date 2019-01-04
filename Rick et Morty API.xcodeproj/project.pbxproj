@@ -13,6 +13,7 @@
 		96630DC921DFA839003C7836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96630DC821DFA839003C7836 /* Assets.xcassets */; };
 		96630DCC21DFA839003C7836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96630DCA21DFA839003C7836 /* LaunchScreen.storyboard */; };
 		96630DD521DFAC4D003C7836 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96630DD421DFAC4D003C7836 /* NavigationController.swift */; };
+		96630DD821DFB5D6003C7836 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96630DD721DFB5D6003C7836 /* APIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		96630DCB21DFA839003C7836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96630DCD21DFA839003C7836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96630DD421DFAC4D003C7836 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		96630DD721DFB5D6003C7836 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		96630DC021DFA835003C7836 /* Rick et Morty API */ = {
 			isa = PBXGroup;
 			children = (
+				96630DD621DFB5A3003C7836 /* Modèles */,
 				96630DD321DFABF7003C7836 /* Controllers */,
 				96630DC121DFA835003C7836 /* AppDelegate.swift */,
 				96630DC521DFA835003C7836 /* Main.storyboard */,
@@ -73,6 +76,15 @@
 				96630DD421DFAC4D003C7836 /* NavigationController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96630DD621DFB5A3003C7836 /* Modèles */ = {
+			isa = PBXGroup;
+			children = (
+				96630DD721DFB5D6003C7836 /* APIHelper.swift */,
+			);
+			name = "Modèles";
+			path = "Modèles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96630DD821DFB5D6003C7836 /* APIHelper.swift in Sources */,
 				96630DC421DFA835003C7836 /* CharactersController.swift in Sources */,
 				96630DD521DFAC4D003C7836 /* NavigationController.swift in Sources */,
 				96630DC221DFA835003C7836 /* AppDelegate.swift in Sources */,
