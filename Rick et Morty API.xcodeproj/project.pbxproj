@@ -15,6 +15,8 @@
 		96630DD521DFAC4D003C7836 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96630DD421DFAC4D003C7836 /* NavigationController.swift */; };
 		96630DD821DFB5D6003C7836 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96630DD721DFB5D6003C7836 /* APIHelper.swift */; };
 		96630DDA21DFBAB2003C7836 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96630DD921DFBAB2003C7836 /* APIResult.swift */; };
+		96E516DC21E4897200790D02 /* PersoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E516DB21E4897200790D02 /* PersoCell.swift */; };
+		96E516E021E48AE900790D02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E516DF21E48AE900790D02 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		96630DD421DFAC4D003C7836 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		96630DD721DFB5D6003C7836 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		96630DD921DFBAB2003C7836 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		96E516DB21E4897200790D02 /* PersoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersoCell.swift; sourceTree = "<group>"; };
+		96E516DF21E48AE900790D02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		96630DC021DFA835003C7836 /* Rick et Morty API */ = {
 			isa = PBXGroup;
 			children = (
+				96E516DA21E4894700790D02 /* View */,
 				96630DD621DFB5A3003C7836 /* Modèles */,
 				96630DD321DFABF7003C7836 /* Controllers */,
 				96630DC121DFA835003C7836 /* AppDelegate.swift */,
@@ -85,9 +90,18 @@
 			children = (
 				96630DD721DFB5D6003C7836 /* APIHelper.swift */,
 				96630DD921DFBAB2003C7836 /* APIResult.swift */,
+				96E516DF21E48AE900790D02 /* Extensions.swift */,
 			);
 			name = "Modèles";
 			path = "Modèles";
+			sourceTree = "<group>";
+		};
+		96E516DA21E4894700790D02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96E516DB21E4897200790D02 /* PersoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +180,8 @@
 				96630DC421DFA835003C7836 /* CharactersController.swift in Sources */,
 				96630DD521DFAC4D003C7836 /* NavigationController.swift in Sources */,
 				96630DC221DFA835003C7836 /* AppDelegate.swift in Sources */,
+				96E516DC21E4897200790D02 /* PersoCell.swift in Sources */,
+				96E516E021E48AE900790D02 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

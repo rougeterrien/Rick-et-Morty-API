@@ -12,6 +12,8 @@ class NavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // création d'une barre navigation avec image
         navigationBar.barTintColor = .darkGray
         navigationBar.tintColor = .white
         let image = UIImage(named: "Rick_and_Morty_logo")

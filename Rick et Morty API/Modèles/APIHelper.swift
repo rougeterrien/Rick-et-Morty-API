@@ -8,46 +8,42 @@
 
 import Foundation
 
+typealias ApiCompletion = (_ string: String?, _ personnages: [Personnage]?, _ errorString: String? ) -> Void
+
 class APIHelper {
     
     private let _baseUrl = "https://rickandmortyapi.com/api/"
     
+    // pour récupérer tous les personnages
     var urlPresonnages: String {
         return _baseUrl + "character/"
     }
     
-    func getPerso(_ string: String) {
+    //fonction pour récupérer tous les personnages
+    func getPerso(_ string: String, completion: ApiCompletion?) {
         if let url = URL(string: string) {
             //continuer
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!.localizedDescription)
+                    // print(error!.localizedDescription)
+                    completion?(nil, nil, error!.localizedDescription)
                 }
                 if data != nil {
-                    // convertir en JSON
                     do {
                         let reponseJSON = try JSONDecoder().decode(APIResult.self, from: data!)
-                        for perso in reponseJSON.results {
-                            print(perso.name)
-                            print(perso.gender)
-                        }
+
+                        completion?(reponseJSON.info.next, reponseJSON.results, nil)
+                        
                     } catch {
-                        print(error.localizedDescription)
+                        completion?(nil, nil, error.localizedDescription)
                     }
                 } else {
-                    print("Aucune data dispo")
+                    completion?(nil, nil, "Aucune data dispo")
+                    print("aucune data dispo")
                 }
-                /*
-                print(data)
-                print(response)
-                print(error)
- */
             }.resume()
         } else {
-            // on arrete
-            print("URL invalide")
+            completion?(nil, nil, "URL invalide")
         }
     }
-    
-    
 }

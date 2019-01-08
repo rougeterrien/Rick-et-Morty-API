@@ -9,13 +9,30 @@
 import UIKit
 
 class CharactersController: UIViewController {
+    
+    var pageSuivante = ""
+    var personnages: [Personnage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        APIHelper().getPerso(APIHelper().urlPresonnages)
+        getPerso()
     }
-
+    
+    func getPerso() {
+        APIHelper().getPerso(APIHelper().urlPresonnages) { (pageSuivante, listePersos, erreurString) in
+            if pageSuivante != nil {
+                print(pageSuivante!)
+                self.pageSuivante = pageSuivante!
+            }
+            if erreurString != nil {
+                print(erreurString!)
+            }
+            if listePersos != nil {
+                self.personnages.append(contentsOf: listePersos!)
+                print(self.personnages.count)
+            }
+        }
+    }
 
 }
 

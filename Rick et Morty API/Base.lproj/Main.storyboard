@@ -18,33 +18,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nu2-v0-Ybr">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ru-Fa-xkv">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xzo-rr-Xfo">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kbQ-8f-0tc">
+                                    <size key="itemSize" width="235" height="205"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BiS-Sw-Vpx">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fce-jU-er1" customClass="PersoCell" customModule="Rick_et_Morty_API" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="0.0" width="235" height="205"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="235" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-3c-kbI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="235" height="205"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-5x-hce">
+                                                            <rect key="frame" x="0.0" y="0.0" width="235" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="QiX-N9-hII"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                                            <color key="textColor" red="1" green="0.2808293959" blue="0.1919494578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vla-sF-W8Q">
+                                                            <rect key="frame" x="0.0" y="50" width="235" height="155"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="vla-sF-W8Q" secondAttribute="bottom" id="5Ce-Ye-aSk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="i2x-5x-hce" secondAttribute="trailing" id="9AK-Cu-1ho"/>
+                                                        <constraint firstItem="vla-sF-W8Q" firstAttribute="top" secondItem="i2x-5x-hce" secondAttribute="bottom" id="B6Z-NZ-01A"/>
+                                                        <constraint firstItem="vla-sF-W8Q" firstAttribute="leading" secondItem="Js2-3c-kbI" secondAttribute="leading" id="Sq4-6Q-98c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vla-sF-W8Q" secondAttribute="trailing" id="dt2-GR-K8T"/>
+                                                        <constraint firstItem="i2x-5x-hce" firstAttribute="leading" secondItem="Js2-3c-kbI" secondAttribute="leading" id="hTh-cO-xXm"/>
+                                                        <constraint firstItem="i2x-5x-hce" firstAttribute="top" secondItem="Js2-3c-kbI" secondAttribute="top" id="oYI-bG-fyS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Js2-3c-kbI" secondAttribute="trailing" id="2wF-lw-fyj"/>
+                                            <constraint firstItem="Js2-3c-kbI" firstAttribute="leading" secondItem="Fce-jU-er1" secondAttribute="leading" id="Ijy-Qz-1R7"/>
+                                            <constraint firstItem="Js2-3c-kbI" firstAttribute="top" secondItem="Fce-jU-er1" secondAttribute="top" id="qpx-WI-qkl"/>
+                                            <constraint firstAttribute="bottom" secondItem="Js2-3c-kbI" secondAttribute="bottom" id="xJo-PQ-4Po"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="HolderView" destination="Js2-3c-kbI" id="yXQ-JL-fFr"/>
+                                            <outlet property="nameLbl" destination="i2x-5x-hce" id="KzI-Jk-eI5"/>
+                                            <outlet property="persoIV" destination="vla-sF-W8Q" id="lFJ-Up-pzB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nu2-v0-Ybr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9dM-3z-Uc2"/>
-                            <constraint firstItem="nu2-v0-Ybr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dfh-Vt-B5p"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nu2-v0-Ybr" secondAttribute="bottom" id="m6P-E9-eqF"/>
-                            <constraint firstItem="nu2-v0-Ybr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nd9-TA-dNH"/>
+                            <constraint firstItem="3ru-Fa-xkv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wxo-gq-r9y"/>
+                            <constraint firstItem="3ru-Fa-xkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dx2-oC-DaI"/>
+                            <constraint firstItem="3ru-Fa-xkv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i0J-MO-teJ"/>
+                            <constraint firstItem="3ru-Fa-xkv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="j4u-dM-vUv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
