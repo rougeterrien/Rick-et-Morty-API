@@ -19,11 +19,11 @@ class CharactersController: UIViewController {
         collectionview.delegate = self
         collectionview.dataSource = self
        
-        getPerso()
+        getPerso(string: APIHelper().urlPresonnages)
     }
     
-    func getPerso() {
-        APIHelper().getPerso(APIHelper().urlPresonnages) { (pageSuivante, listePersos, erreurString) in
+    func getPerso(string: String) {
+        APIHelper().getPerso(string) { (pageSuivante, listePersos, erreurString) in
             if pageSuivante != nil {
                 print(pageSuivante!)
                 self.pageSuivante = pageSuivante!
@@ -34,7 +34,7 @@ class CharactersController: UIViewController {
             if listePersos != nil {
                 self.personnages.append(contentsOf: listePersos!)
                 DispatchQueue.main.async {
-                    self.collectionview.reloadData()
+                  self.collectionview.reloadData()
                 }
             }
         }
@@ -67,7 +67,13 @@ extension CharactersController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: taille, height: taille)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == personnages.count - 1 {
+            if pageSuivante != "" {
+            getPerso(string: pageSuivante)
+            }
+        }
+    }
     
     
 }
